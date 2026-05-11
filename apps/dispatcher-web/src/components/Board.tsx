@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Column from './Column';
 import StuckModal from './StuckModal';
-import { CardType } from '../types';
+import type { CardType } from '../types';
 
 const COLUMNS = [
   { id: 'Backlog', title: 'Backlog' },

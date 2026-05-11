@@ -1,0 +1,13 @@
+
+
+> @omni/knowledge-api@0.1.0 lint
+> poetry run ruff check .
+
+[31;1mCommand not found: [39;22m[36mruff[39m
+[1mnpm[22m [31merror[39m Lifecycle script `lint` failed with error:
+[1mnpm[22m [31merror[39m [94mcode[39m [33m1[39m
+[1mnpm[22m [31merror[39m [94mpath[39m /Users/klaizar/Projects/MVP/Know-Task-OS/apps/knowledge-api
+[1mnpm[22m [31merror[39m [94mworkspace[39m @omni/knowledge-api@0.1.0
+[1mnpm[22m [31merror[39m [94mlocation[39m /Users/klaizar/Projects/MVP/Know-Task-OS/apps/knowledge-api
+[1mnpm[22m [31merror[39m command failed
+[1mnpm[22m [31merror[39m [94mcommand[39m sh -c poetry run ruff check .

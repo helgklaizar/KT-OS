@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Board from './components/Board';
 import ActivityFeed from './components/ActivityFeed';
 import { RBACProvider } from './components/RBAC';

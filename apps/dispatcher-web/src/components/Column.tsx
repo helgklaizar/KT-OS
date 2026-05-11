@@ -1,5 +1,5 @@
 import React from 'react';
-import { CardType } from '../types';
+import type { CardType } from '../types';
 import Card from './Card';
 import './Column.css';
 

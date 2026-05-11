@@ -1,6 +1,7 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
+import type { CardType } from '../types';
 import Card from './Card';
-import { CardType } from '../types';
 
 const mockCard: CardType = {
   id: '999',

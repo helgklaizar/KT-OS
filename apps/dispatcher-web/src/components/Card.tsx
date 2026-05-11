@@ -1,5 +1,5 @@
 import React from 'react';
-import { CardType } from '../types';
+import type { CardType } from '../types';
 import './Card.css';
 
 interface CardProps {
@@ -15,7 +15,7 @@ const Card: React.FC<CardProps> = ({ card, onClick }) => {
     'Manager': 'var(--accent-orange)'
   };
 
-  const badgeColor = agentColors[card.agentRole] || 'var(--text-muted)';
+  const badgeColor = card.agentRole ? agentColors[card.agentRole] : 'var(--text-muted)';
 
   const handleDragStart = (e: React.DragEvent<HTMLDivElement>) => {
     e.dataTransfer.setData('cardId', card.id);

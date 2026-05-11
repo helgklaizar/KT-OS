@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './StuckModal.css';
-import { CardType } from '../types';
+import type { CardType } from '../types';
 
 interface StuckModalProps {
   card: CardType;

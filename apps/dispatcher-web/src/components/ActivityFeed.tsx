@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { LogEntry } from '../types';
+import type { LogEntry } from '../types';
 import './ActivityFeed.css';
 
 const ActivityFeed: React.FC = () => {
