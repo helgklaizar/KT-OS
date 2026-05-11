@@ -1,0 +1,4986 @@
+[
+  {
+    "file_path": "../ui/node_modules/zod/package.json",
+    "line_number": 6,
+    "match_content": "\"author\": \"Colin McDonnell <zod@colinhacks.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/core/tests/extend.test.ts",
+    "line_number": 17,
+    "match_content": "schema3.parse({ email: \"test@example.com\" });",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/mini/tests/string.test.ts",
+    "line_number": 75,
+    "match_content": "expect(z.parse(a, \"test@test.com\")).toEqual(\"test@test.com\");",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/mini/tests/string.test.ts",
+    "line_number": 144,
+    "match_content": "expect(() => a.parse(\"mailto:example@example.com\")).toThrow();",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/mini/tests/object.test.ts",
+    "line_number": 133,
+    "match_content": "expect(z.safeParse(pickedSchema, { name: \"John\", email: \"john@example.com\" }).success).toBe(true);",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/mini/tests/object.test.ts",
+    "line_number": 145,
+    "match_content": "expect(z.safeParse(omittedSchema, { name: \"John\", email: \"john@example.com\" }).success).toBe(true);",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/template-literal.test.ts",
+    "line_number": 361,
+    "match_content": "email.parse(\"info@example.com\");",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/template-literal.test.ts",
+    "line_number": 496,
+    "match_content": "expect(() => email.parse(\"info@example.com@\")).toThrow();",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string-formats.test.ts",
+    "line_number": 13,
+    "match_content": "expect(a.safeParse(\"longemail@example.com\").success).toBe(true); // Positive",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string-formats.test.ts",
+    "line_number": 14,
+    "match_content": "expect(a.safeParse(\"ort@e.co\").success).toBe(false); // Negative",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string-formats.test.ts",
+    "line_number": 17,
+    "match_content": "expect(b.safeParse(\"sho@e.co\").success).toBe(true); // Positive",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string-formats.test.ts",
+    "line_number": 18,
+    "match_content": "expect(b.safeParse(\"longemail@example.com\").success).toBe(false); // Negative",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string-formats.test.ts",
+    "line_number": 21,
+    "match_content": "expect(c.safeParse(\"56780@e.co\").success).toBe(true); // Positive",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string-formats.test.ts",
+    "line_number": 22,
+    "match_content": "expect(c.safeParse(\"shoasdfasdfrt@e.co\").success).toBe(false); // Negative",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string-formats.test.ts",
+    "line_number": 25,
+    "match_content": "expect(d.safeParse(\"EMAIL@EXAMPLE.COM\").success).toBe(true); // Positive",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string-formats.test.ts",
+    "line_number": 26,
+    "match_content": "expect(d.safeParse(\"email@example.com\").success).toBe(false); // Negative",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string-formats.test.ts",
+    "line_number": 29,
+    "match_content": "expect(e.safeParse(\"email@example.com\").success).toBe(true); // Positive",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string-formats.test.ts",
+    "line_number": 30,
+    "match_content": "expect(e.safeParse(\"EMAIL@EXAMPLE.COM\").success).toBe(false); // Negative",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/record.test.ts",
+    "line_number": 498,
+    "match_content": "// email: \"john@example.com\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/record.test.ts",
+    "line_number": 504,
+    "match_content": "email: \"john@example.com\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/record.test.ts",
+    "line_number": 519,
+    "match_content": "expect(schema.parse({ name: \"n\", email: \"e@example.com\" })).toEqual({ name: \"n\", email: \"e@example.com\" });",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/union.test.ts",
+    "line_number": 24,
+    "match_content": "expect(schema.parse({ email: \"asdlkjf@lkajsdf.com\" })).toEqual({",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/union.test.ts",
+    "line_number": 25,
+    "match_content": "email: \"asdlkjf@lkajsdf.com\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 69,
+    "match_content": "`email@domain.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 70,
+    "match_content": "`firstname.lastname@domain.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 71,
+    "match_content": "`email@subdomain.domain.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 72,
+    "match_content": "`firstname+lastname@domain.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 73,
+    "match_content": "`1234567890@domain.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 74,
+    "match_content": "`email@domain-one.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 75,
+    "match_content": "`_______@domain.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 76,
+    "match_content": "`email@domain.name`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 77,
+    "match_content": "`email@domain.co.jp`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 78,
+    "match_content": "`firstname-lastname@domain.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 79,
+    "match_content": "`very.common@example.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 80,
+    "match_content": "`disposable.style.email.with+symbol@example.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 81,
+    "match_content": "`other.email-with-hyphen@example.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 82,
+    "match_content": "`fully-qualified-domain@example.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 83,
+    "match_content": "`user.name+tag+sorting@example.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 84,
+    "match_content": "`x@example.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 85,
+    "match_content": "`mojojojo@asdf.example.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 86,
+    "match_content": "`example-indeed@strange-example.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 87,
+    "match_content": "`example@s.example`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 88,
+    "match_content": "`user-@example.org`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 89,
+    "match_content": "`user@my-example.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 90,
+    "match_content": "`a@b.cd`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 91,
+    "match_content": "`work+user@mail.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 92,
+    "match_content": "`tom@test.te-st.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 93,
+    "match_content": "`something@subdomain.domain-with-hyphens.tld`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 94,
+    "match_content": "`common'name@domain.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 95,
+    "match_content": "`francois@etu.inp-n7.fr`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 99,
+    "match_content": "// `user%example.com@example.org`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 100,
+    "match_content": "// `mailhost!username@example.org`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 101,
+    "match_content": "// `test/test@test.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 112,
+    "match_content": "`a,b@domain.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 136,
+    "match_content": "`Joe Smith &lt;email@domain.com&gt;`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 138,
+    "match_content": "`email@domain@domain.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 139,
+    "match_content": "`.email@domain.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 140,
+    "match_content": "`email.@domain.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 141,
+    "match_content": "`email..email@domain.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 143,
+    "match_content": "`email@domain.com (Joe Smith)`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 145,
+    "match_content": "`email@-domain.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 147,
+    "match_content": "`email@domain..com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 149,
+    "match_content": "`A@b@c@example.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 150,
+    "match_content": "`colin..hacks@domain.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 151,
+    "match_content": "`a\"b(c)d,e:f;g<h>i[j\\k]l@example.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 152,
+    "match_content": "`just\"not\"right@example.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 153,
+    "match_content": "`this is\"not\\allowed@example.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 154,
+    "match_content": "`this\\ still\\\"not\\\\allowed@example.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 159,
+    "match_content": "`invalid@-start.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 160,
+    "match_content": "`invalid@end.com-`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 166,
+    "match_content": "`double..point@test.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 167,
+    "match_content": "`asdad@test..com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 168,
+    "match_content": "`asdad@hghg...sd...au`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 169,
+    "match_content": "`asdad@hghg........au`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 338,
+    "match_content": "url.parse(\"https://anonymous:flabada@developer.mozilla.org/en-US/docs/Web/API/URL/password\");",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 348,
+    "match_content": "expect(() => url.parse(\"asdfj@lkjsdf.com\")).toThrow();",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 466,
+    "match_content": "expect(() => httpUrl.parse(\"mailto:asdf@lckj.com\")).toThrow();",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/string.test.ts",
+    "line_number": 1138,
+    "match_content": "expect(() => hostname.parse(\"ex@mple.com\")).toThrow();",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/from-json-schema.test.ts",
+    "line_number": 448,
+    "match_content": "expect(schema.parse(\"test@example.com\")).toBe(\"test@example.com\");",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/refine.test.ts",
+    "line_number": 65,
+    "match_content": "email: \"aaaa@gmail.com\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/refine.test.ts",
+    "line_number": 92,
+    "match_content": "email: \"aaaa@gmail.com\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v4/classic/tests/refine.test.ts",
+    "line_number": 102,
+    "match_content": "email: \"aaaa@gmail.com\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/unions.test.ts",
+    "line_number": 25,
+    "match_content": "expect(schema.parse({ email: \"asdlkjf@lkajsdf.com\" })).toEqual({",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/unions.test.ts",
+    "line_number": 26,
+    "match_content": "email: \"asdlkjf@lkajsdf.com\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 43,
+    "match_content": "`email@domain.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 44,
+    "match_content": "`firstname.lastname@domain.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 45,
+    "match_content": "`email@subdomain.domain.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 46,
+    "match_content": "`firstname+lastname@domain.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 47,
+    "match_content": "`1234567890@domain.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 48,
+    "match_content": "`email@domain-one.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 49,
+    "match_content": "`_______@domain.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 50,
+    "match_content": "`email@domain.name`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 51,
+    "match_content": "`email@domain.co.jp`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 52,
+    "match_content": "`firstname-lastname@domain.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 53,
+    "match_content": "`very.common@example.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 54,
+    "match_content": "`disposable.style.email.with+symbol@example.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 55,
+    "match_content": "`other.email-with-hyphen@example.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 56,
+    "match_content": "`fully-qualified-domain@example.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 57,
+    "match_content": "`user.name+tag+sorting@example.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 58,
+    "match_content": "`x@example.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 59,
+    "match_content": "`mojojojo@asdf.example.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 60,
+    "match_content": "`example-indeed@strange-example.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 61,
+    "match_content": "`example@s.example`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 62,
+    "match_content": "`user-@example.org`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 63,
+    "match_content": "`user@my-example.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 64,
+    "match_content": "`a@b.cd`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 65,
+    "match_content": "`work+user@mail.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 66,
+    "match_content": "`tom@test.te-st.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 67,
+    "match_content": "`something@subdomain.domain-with-hyphens.tld`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 68,
+    "match_content": "`common'name@domain.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 69,
+    "match_content": "`francois@etu.inp-n7.fr`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 73,
+    "match_content": "// `user%example.com@example.org`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 74,
+    "match_content": "// `mailhost!username@example.org`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 75,
+    "match_content": "// `test/test@test.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 86,
+    "match_content": "`a,b@domain.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 110,
+    "match_content": "`Joe Smith &lt;email@domain.com&gt;`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 112,
+    "match_content": "`email@domain@domain.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 113,
+    "match_content": "`.email@domain.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 114,
+    "match_content": "`email.@domain.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 115,
+    "match_content": "`email..email@domain.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 117,
+    "match_content": "`email@domain.com (Joe Smith)`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 119,
+    "match_content": "`email@-domain.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 121,
+    "match_content": "`email@domain..com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 123,
+    "match_content": "`A@b@c@example.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 124,
+    "match_content": "`colin..hacks@domain.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 125,
+    "match_content": "`a\"b(c)d,e:f;g<h>i[j\\k]l@example.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 126,
+    "match_content": "`just\"not\"right@example.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 127,
+    "match_content": "`this is\"not\\allowed@example.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 128,
+    "match_content": "`this\\ still\\\"not\\\\allowed@example.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 133,
+    "match_content": "`invalid@-start.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 134,
+    "match_content": "`invalid@end.com-`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 140,
+    "match_content": "`double..point@test.com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 141,
+    "match_content": "`asdad@test..com`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 142,
+    "match_content": "`asdad@hghg...sd...au`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 143,
+    "match_content": "`asdad@hghg........au`,",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/string.test.ts",
+    "line_number": 302,
+    "match_content": "expect(() => url.parse(\"asdfj@lkjsdf.com\")).toThrow();",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/refine.test.ts",
+    "line_number": 39,
+    "match_content": "email: \"aaaa@gmail.com\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod/src/v3/tests/refine.test.ts",
+    "line_number": 73,
+    "match_content": "email: \"aaaa@gmail.com\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/@types/node/dns.d.ts",
+    "line_number": 502,
+    "match_content": "* available for the `hostname` (e.g. `[{critical: 0, iodef: 'mailto:pki@example.com'}, {critical: 128, issue: 'pki.example.com'}]`).",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/@types/node/http.d.ts",
+    "line_number": 1882,
+    "match_content": "* const options = new URL('http://abc:xyz@example.com');",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/@types/node/url.d.ts",
+    "line_number": 595,
+    "match_content": "* const myURL = new URL('https://abc:xyz@example.com');",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/@types/node/url.d.ts",
+    "line_number": 601,
+    "match_content": "* // Prints https://abc:123@example.com/",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/@types/node/url.d.ts",
+    "line_number": 760,
+    "match_content": "* const myURL = new URL('https://abc:xyz@example.com');",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/@types/node/url.d.ts",
+    "line_number": 766,
+    "match_content": "* // Prints https://123:xyz@example.com/",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/@types/node/https.d.ts",
+    "line_number": 435,
+    "match_content": "* const options = new URL('https://abc:xyz@example.com');",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/@types/node/dns/promises.d.ts",
+    "line_number": 200,
+    "match_content": "* certification authority authorization records available for the `hostname` (e.g. `[{critical: 0, iodef: 'mailto:pki@example.com'},{critical: 128, issue: 'pki.example.com'}]`).",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/globals/globals.json",
+    "line_number": 145,
+    "match_content": "\"CanvasCaptureMediaStream\": false,",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/globals/globals.json",
+    "line_number": 146,
+    "match_content": "\"CanvasCaptureMediaStreamTrack\": false,",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/globals/globals.json",
+    "line_number": 149,
+    "match_content": "\"CanvasRenderingContext2D\": false,",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/globals/globals.json",
+    "line_number": 644,
+    "match_content": "\"OffscreenCanvasRenderingContext2D\": false,",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/globals/globals.json",
+    "line_number": 3174,
+    "match_content": "\"OffscreenCanvasRenderingContext2D\": false,",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/globals/globals.json",
+    "line_number": 3536,
+    "match_content": "\"OffscreenCanvasRenderingContext2D\": false,",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/globals/globals.json",
+    "line_number": 3923,
+    "match_content": "\"OffscreenCanvasRenderingContext2D\": false,",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/globals/license",
+    "line_number": 3,
+    "match_content": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/globals/package.json",
+    "line_number": 10,
+    "match_content": "\"email\": \"sindresorhus@gmail.com\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/globals/index.d.ts",
+    "line_number": 152,
+    "match_content": "readonly 'CanvasCaptureMediaStream': false;",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/globals/index.d.ts",
+    "line_number": 153,
+    "match_content": "readonly 'CanvasCaptureMediaStreamTrack': false;",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/globals/index.d.ts",
+    "line_number": 156,
+    "match_content": "readonly 'CanvasRenderingContext2D': false;",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/globals/index.d.ts",
+    "line_number": 651,
+    "match_content": "readonly 'OffscreenCanvasRenderingContext2D': false;",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/globals/index.d.ts",
+    "line_number": 3222,
+    "match_content": "readonly 'OffscreenCanvasRenderingContext2D': false;",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/globals/index.d.ts",
+    "line_number": 3586,
+    "match_content": "readonly 'OffscreenCanvasRenderingContext2D': false;",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/globals/index.d.ts",
+    "line_number": 3980,
+    "match_content": "readonly 'OffscreenCanvasRenderingContext2D': false;",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/browserslist/LICENSE",
+    "line_number": 3,
+    "match_content": "Copyright 2014 Andrey Sitnik <andrey@sitnik.es> and other contributors",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/browserslist/package.json",
+    "line_number": 11,
+    "match_content": "\"author\": \"Andrey Sitnik <andrey@sitnik.es>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/shebang-regex/license",
+    "line_number": 3,
+    "match_content": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/shebang-regex/package.json",
+    "line_number": 9,
+    "match_content": "\"email\": \"sindresorhus@gmail.com\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/csstype/package.json",
+    "line_number": 8,
+    "match_content": "\"author\": \"Fredrik Nicol <fredrik.nicol@gmail.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/ts-api-utils/package.json",
+    "line_number": 12,
+    "match_content": "\"email\": \"npm@joshuakgoldberg.com\"",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/prelude-ls/package.json",
+    "line_number": 4,
+    "match_content": "\"author\": \"George Zahariev <z@georgezahariev.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/node-releases/package.json",
+    "line_number": 17,
+    "match_content": "\"author\": \"Sergey Rubanov <chi187@gmail.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/escape-string-regexp/license",
+    "line_number": 3,
+    "match_content": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/escape-string-regexp/package.json",
+    "line_number": 10,
+    "match_content": "\"email\": \"sindresorhus@gmail.com\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/lru-cache/package.json",
+    "line_number": 5,
+    "match_content": "\"author\": \"Isaac Z. Schlueter <i@izs.me>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/imurmurhash/imurmurhash.js",
+    "line_number": 5,
+    "match_content": "* @author <a href=\"mailto:jensyt@gmail.com\">Jens Taylor</a>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/imurmurhash/imurmurhash.js",
+    "line_number": 7,
+    "match_content": "* @author <a href=\"mailto:gary.court@gmail.com\">Gary Court</a>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/imurmurhash/imurmurhash.js",
+    "line_number": 9,
+    "match_content": "* @author <a href=\"mailto:aappleby@gmail.com\">Austin Appleby</a>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/imurmurhash/package.json",
+    "line_number": 29,
+    "match_content": "\"email\": \"jensyt@gmail.com\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/imurmurhash/imurmurhash.min.js",
+    "line_number": 5,
+    "match_content": "* @author <a href=\"mailto:jensyt@gmail.com\">Jens Taylor</a>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/imurmurhash/imurmurhash.min.js",
+    "line_number": 7,
+    "match_content": "* @author <a href=\"mailto:gary.court@gmail.com\">Gary Court</a>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/imurmurhash/imurmurhash.min.js",
+    "line_number": 9,
+    "match_content": "* @author <a href=\"mailto:aappleby@gmail.com\">Austin Appleby</a>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint-scope/dist/eslint-scope.cjs",
+    "line_number": 25,
+    "match_content": "Copyright (C) 2015 Yusuke Suzuki <utatane.tea@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint-scope/dist/eslint-scope.cjs",
+    "line_number": 197,
+    "match_content": "Copyright (C) 2015 Yusuke Suzuki <utatane.tea@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint-scope/dist/eslint-scope.cjs",
+    "line_number": 286,
+    "match_content": "Copyright (C) 2015 Yusuke Suzuki <utatane.tea@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint-scope/dist/eslint-scope.cjs",
+    "line_number": 369,
+    "match_content": "Copyright (C) 2015 Yusuke Suzuki <utatane.tea@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint-scope/dist/eslint-scope.cjs",
+    "line_number": 1200,
+    "match_content": "Copyright (C) 2015 Yusuke Suzuki <utatane.tea@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint-scope/dist/eslint-scope.cjs",
+    "line_number": 1482,
+    "match_content": "Copyright (C) 2015 Yusuke Suzuki <utatane.tea@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint-scope/dist/eslint-scope.cjs",
+    "line_number": 1636,
+    "match_content": "Copyright (C) 2015 Yusuke Suzuki <utatane.tea@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint-scope/dist/eslint-scope.cjs",
+    "line_number": 2445,
+    "match_content": "Copyright (C) 2012-2014 Yusuke Suzuki <utatane.tea@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint-scope/dist/eslint-scope.cjs",
+    "line_number": 2446,
+    "match_content": "Copyright (C) 2013 Alex Seville <hi@alexanderseville.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint-scope/dist/eslint-scope.cjs",
+    "line_number": 2447,
+    "match_content": "Copyright (C) 2014 Thiago de Arruda <tpadilha84@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint-scope/lib/referencer.js",
+    "line_number": 2,
+    "match_content": "Copyright (C) 2015 Yusuke Suzuki <utatane.tea@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint-scope/lib/index.js",
+    "line_number": 2,
+    "match_content": "Copyright (C) 2012-2014 Yusuke Suzuki <utatane.tea@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint-scope/lib/index.js",
+    "line_number": 3,
+    "match_content": "Copyright (C) 2013 Alex Seville <hi@alexanderseville.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint-scope/lib/index.js",
+    "line_number": 4,
+    "match_content": "Copyright (C) 2014 Thiago de Arruda <tpadilha84@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint-scope/lib/scope-manager.js",
+    "line_number": 2,
+    "match_content": "Copyright (C) 2015 Yusuke Suzuki <utatane.tea@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint-scope/lib/scope.js",
+    "line_number": 2,
+    "match_content": "Copyright (C) 2015 Yusuke Suzuki <utatane.tea@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint-scope/lib/pattern-visitor.js",
+    "line_number": 2,
+    "match_content": "Copyright (C) 2015 Yusuke Suzuki <utatane.tea@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint-scope/lib/variable.js",
+    "line_number": 2,
+    "match_content": "Copyright (C) 2015 Yusuke Suzuki <utatane.tea@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint-scope/lib/reference.js",
+    "line_number": 2,
+    "match_content": "Copyright (C) 2015 Yusuke Suzuki <utatane.tea@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint-scope/lib/definition.js",
+    "line_number": 2,
+    "match_content": "Copyright (C) 2015 Yusuke Suzuki <utatane.tea@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/escalade/license",
+    "line_number": 3,
+    "match_content": "Copyright (c) Luke Edwards <luke.edwards05@gmail.com> (lukeed.com)",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/escalade/package.json",
+    "line_number": 12,
+    "match_content": "\"email\": \"luke.edwards05@gmail.com\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/fast-json-stable-stringify/benchmark/test.json",
+    "line_number": 14,
+    "match_content": "\"email\": \"careysavage@veraq.com\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/fast-json-stable-stringify/benchmark/test.json",
+    "line_number": 59,
+    "match_content": "\"email\": \"elinorpearson@flexigen.com\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/fast-json-stable-stringify/benchmark/test.json",
+    "line_number": 104,
+    "match_content": "\"email\": \"irwindavidson@danja.com\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/fast-json-stable-stringify/package.json",
+    "line_number": 38,
+    "match_content": "\"email\": \"mail@substack.net\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/detect-libc/package.json",
+    "line_number": 25,
+    "match_content": "\"author\": \"Lovell Fuller <npm@lovell.info>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/detect-libc/package.json",
+    "line_number": 27,
+    "match_content": "\"Niklas Salmoukas <niklas@salmoukas.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/detect-libc/package.json",
+    "line_number": 28,
+    "match_content": "\"Vinícius Lourenço <vinyygamerlol@gmail.com>\"",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/balanced-match/LICENSE.md",
+    "line_number": 3,
+    "match_content": "Original code Copyright Julian Gruber <julian@juliangruber.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/balanced-match/LICENSE.md",
+    "line_number": 5,
+    "match_content": "Port to TypeScript Copyright Isaac Z. Schlueter <i@izs.me>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/path-exists/license",
+    "line_number": 3,
+    "match_content": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/path-exists/package.json",
+    "line_number": 9,
+    "match_content": "\"email\": \"sindresorhus@gmail.com\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/nanoid/LICENSE",
+    "line_number": 3,
+    "match_content": "Copyright 2017 Andrey Sitnik <andrey@sitnik.ru>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/nanoid/package.json",
+    "line_number": 20,
+    "match_content": "\"author\": \"Andrey Sitnik <andrey@sitnik.ru>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/acorn/package.json",
+    "line_number": 26,
+    "match_content": "\"email\": \"marijnh@gmail.com\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/acorn/package.json",
+    "line_number": 31,
+    "match_content": "\"email\": \"me@rreverser.com\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/hermes-parser/dist/HermesParserWASM.js",
+    "line_number": 6,
+    "match_content": "*/'use strict';var hermes_parser_wasm=(()=>{var _scriptDir=typeof document!=='undefined'&&document.currentScript?document.currentScript.src:undefined;if(typeof __filename!=='undefined')_scriptDir=_scr",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/hermes-parser/package.json",
+    "line_number": 9,
+    "match_content": "\"url\": \"git@github.com:facebook/hermes.git\"",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/gensync/LICENSE",
+    "line_number": 1,
+    "match_content": "Copyright 2018 Logan Smyth <loganfsmyth@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/gensync/package.json",
+    "line_number": 7,
+    "match_content": "\"author\": \"Logan Smyth <loganfsmyth@gmail.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/ignore/package.json",
+    "line_number": 32,
+    "match_content": "\"url\": \"git@github.com:kaelzhang/node-ignore.git\"",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/ignore/LICENSE-MIT",
+    "line_number": 1,
+    "match_content": "Copyright (c) 2013 Kael Zhang <i@kael.me>, contributors",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/esrecurse/esrecurse.js",
+    "line_number": 2,
+    "match_content": "Copyright (C) 2014 Yusuke Suzuki <utatane.tea@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/esrecurse/gulpfile.babel.js",
+    "line_number": 1,
+    "match_content": "// Copyright (C) 2014 Yusuke Suzuki <utatane.tea@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/esrecurse/package.json",
+    "line_number": 13,
+    "match_content": "\"email\": \"utatane.tea@gmail.com\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/README.md",
+    "line_number": 39,
+    "match_content": "the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com)",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/typescript.js",
+    "line_number": 38862,
+    "match_content": "function canParseModuleExportName() {",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/typescript.js",
+    "line_number": 38894,
+    "match_content": "if (canParseModuleExportName()) {",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/typescript.js",
+    "line_number": 38904,
+    "match_content": "} else if (canParseModuleExportName()) {",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/typescript.js",
+    "line_number": 38912,
+    "match_content": "} else if (canParseModuleExportName()) {",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/typescript.js",
+    "line_number": 123354,
+    "match_content": "emitExpressionWithLeadingSpace(node.expression && parenthesizeExpressionForNoAsi(node.expression), parenthesizeExpressionForNoAsiAndDisallowedComma);",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/typescript.js",
+    "line_number": 123701,
+    "match_content": "function parenthesizeExpressionForNoAsiAndDisallowedComma(node) {",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/_tsc.js",
+    "line_number": 34579,
+    "match_content": "function canParseModuleExportName() {",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/_tsc.js",
+    "line_number": 34611,
+    "match_content": "if (canParseModuleExportName()) {",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/_tsc.js",
+    "line_number": 34621,
+    "match_content": "} else if (canParseModuleExportName()) {",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/_tsc.js",
+    "line_number": 34629,
+    "match_content": "} else if (canParseModuleExportName()) {",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/_tsc.js",
+    "line_number": 118526,
+    "match_content": "emitExpressionWithLeadingSpace(node.expression && parenthesizeExpressionForNoAsi(node.expression), parenthesizeExpressionForNoAsiAndDisallowedComma);",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/_tsc.js",
+    "line_number": 118873,
+    "match_content": "function parenthesizeExpressionForNoAsiAndDisallowedComma(node) {",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 381,
+    "match_content": "interface CanvasRenderingContext2DSettings {",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 888,
+    "match_content": "mode?: GPUCanvasToneMappingMode;",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10244,
+    "match_content": "* The **`CanvasCaptureMediaStreamTrack`** interface of the Media Capture and Streams API represents the video track contained in a MediaStream being generated from a <canvas> following a call to HTMLC",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10246,
+    "match_content": "* [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasCaptureMediaStreamTrack)",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10248,
+    "match_content": "interface CanvasCaptureMediaStreamTrack extends MediaStreamTrack {",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10250,
+    "match_content": "* The **`canvas`** read-only property of the CanvasCaptureMediaStreamTrack interface returns the HTMLCanvasElement from which frames are being captured.",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10252,
+    "match_content": "* [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasCaptureMediaStreamTrack/canvas)",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10256,
+    "match_content": "* The **`requestFrame()`** method of the CanvasCaptureMediaStreamTrack interface requests that a frame be captured from the canvas and sent to the stream.",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10258,
+    "match_content": "* [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasCaptureMediaStreamTrack/requestFrame)",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10261,
+    "match_content": "addEventListener<K extends keyof MediaStreamTrackEventMap>(type: K, listener: (this: CanvasCaptureMediaStreamTrack, ev: MediaStreamTrackEventMap[K]) => any, options?: boolean | AddEventListenerOptions",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10263,
+    "match_content": "removeEventListener<K extends keyof MediaStreamTrackEventMap>(type: K, listener: (this: CanvasCaptureMediaStreamTrack, ev: MediaStreamTrackEventMap[K]) => any, options?: boolean | EventListenerOptions",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10267,
+    "match_content": "declare var CanvasCaptureMediaStreamTrack: {",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10268,
+    "match_content": "prototype: CanvasCaptureMediaStreamTrack;",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10269,
+    "match_content": "new(): CanvasCaptureMediaStreamTrack;",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10273,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/globalAlpha) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10275,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10280,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/drawImage) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10287,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/beginPath) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10289,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/clip) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10292,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/fill) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10295,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/isPointInPath) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10298,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/isPointInStroke) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10301,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/stroke) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10306,
+    "match_content": "interface CanvasFillStrokeStyles {",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10307,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/fillStyle) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10309,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/strokeStyle) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10311,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/createConicGradient) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10313,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/createLinearGradient) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10315,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/createPattern) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10317,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/createRadialGradient) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10322,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/filter) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10327,
+    "match_content": "* The **`CanvasGradient`** interface represents an opaque object describing a gradient. It is returned by the methods CanvasRenderingContext2D.createLinearGradient(), CanvasRenderingContext2D.createCo",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10346,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/createImageData) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10349,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/getImageData) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10351,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/putImageData) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10357,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/imageSmoothingEnabled) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10359,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/imageSmoothingQuality) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10364,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/arc) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10366,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/arcTo) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10368,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/bezierCurveTo) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10370,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/closePath) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10372,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/ellipse) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10374,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/lineTo) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10376,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/moveTo) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10378,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/quadraticCurveTo) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10380,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/rect) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10382,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/roundRect) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10386,
+    "match_content": "interface CanvasPathDrawingStyles {",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10387,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/lineCap) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10389,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/lineDashOffset) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10391,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/lineJoin) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10393,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/lineWidth) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10395,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/miterLimit) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10397,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/getLineDash) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10399,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/setLineDash) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10404,
+    "match_content": "* The **`CanvasPattern`** interface represents an opaque object describing a pattern, based on an image, a canvas, or a video, created by the CanvasRenderingContext2D.createPattern() method.",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10423,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/clearRect) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10425,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/fillRect) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10427,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/strokeRect) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10432,
+    "match_content": "* The **`CanvasRenderingContext2D`** interface, part of the Canvas API, provides the 2D rendering context for the drawing surface of a <canvas> element. It is used for drawing shapes, text, images, an",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10434,
+    "match_content": "* [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D)",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10436,
+    "match_content": "interface CanvasRenderingContext2D extends CanvasCompositing, CanvasDrawImage, CanvasDrawPath, CanvasFillStrokeStyles, CanvasFilters, CanvasImageData, CanvasImageSmoothing, CanvasPath, CanvasPathDrawi",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10438,
+    "match_content": "* The **`CanvasRenderingContext2D.canvas`** property, part of the Canvas API, is a read-only reference to the HTMLCanvasElement object that is associated with a given context. It might be null if ther",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10440,
+    "match_content": "* [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/canvas)",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10445,
+    "match_content": "declare var CanvasRenderingContext2D: {",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10446,
+    "match_content": "prototype: CanvasRenderingContext2D;",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10447,
+    "match_content": "new(): CanvasRenderingContext2D;",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10451,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/getContextAttributes) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10452,
+    "match_content": "getContextAttributes(): CanvasRenderingContext2DSettings;",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10456,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/shadowBlur) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10458,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/shadowColor) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10460,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/shadowOffsetX) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10462,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/shadowOffsetY) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10467,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/isContextLost) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10469,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/reset) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10471,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/restore) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10473,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/save) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10478,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/fillText) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10480,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/measureText) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10482,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/strokeText) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10486,
+    "match_content": "interface CanvasTextDrawingStyles {",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10487,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/direction) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10489,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/font) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10491,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/fontKerning) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10493,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/fontStretch) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10495,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/fontVariantCaps) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10496,
+    "match_content": "fontVariantCaps: CanvasFontVariantCaps;",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10497,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/letterSpacing) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10499,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/textAlign) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10501,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/textBaseline) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10503,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/textRendering) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10505,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/wordSpacing) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10510,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/getTransform) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10512,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/resetTransform) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10514,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/rotate) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10516,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/scale) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10518,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/setTransform) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10521,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/transform) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10523,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/translate) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 10528,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/drawFocusIfNeeded) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 17430,
+    "match_content": "* The **`captureStream()`** method of the HTMLCanvasElement interface returns a MediaStream which includes a CanvasCaptureMediaStreamTrack containing a real-time video capture of the canvas's contents",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 17440,
+    "match_content": "getContext(contextId: \"2d\", options?: CanvasRenderingContext2DSettings): CanvasRenderingContext2D | null;",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 26766,
+    "match_content": "getContext(contextId: \"2d\", options?: any): OffscreenCanvasRenderingContext2D | null;",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 26789,
+    "match_content": "* The **`OffscreenCanvasRenderingContext2D`** interface is a CanvasRenderingContext2D rendering context for drawing to the bitmap of an OffscreenCanvas object. It is similar to the CanvasRenderingCont",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 26791,
+    "match_content": "* [MDN Reference](https://developer.mozilla.org/docs/Web/API/OffscreenCanvasRenderingContext2D)",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 26793,
+    "match_content": "interface OffscreenCanvasRenderingContext2D extends CanvasCompositing, CanvasDrawImage, CanvasDrawPath, CanvasFillStrokeStyles, CanvasFilters, CanvasImageData, CanvasImageSmoothing, CanvasPath, Canvas",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 26794,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/canvas) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 26798,
+    "match_content": "declare var OffscreenCanvasRenderingContext2D: {",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 26799,
+    "match_content": "prototype: OffscreenCanvasRenderingContext2D;",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 26800,
+    "match_content": "new(): OffscreenCanvasRenderingContext2D;",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 27114,
+    "match_content": "* The **`Path2D`** interface of the Canvas 2D API is used to declare a path that can then be used on a CanvasRenderingContext2D object. The path methods of the CanvasRenderingContext2D interface are a",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 36560,
+    "match_content": "* The **`TextMetrics`** interface represents the dimensions of a piece of text in the canvas; a TextMetrics instance can be retrieved using the CanvasRenderingContext2D.measureText() method.",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 36566,
+    "match_content": "* The read-only **`actualBoundingBoxAscent`** property of the TextMetrics interface is a double giving the distance from the horizontal line indicated by the CanvasRenderingContext2D.textBaseline attr",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 36572,
+    "match_content": "* The read-only **`actualBoundingBoxDescent`** property of the TextMetrics interface is a double giving the distance from the horizontal line indicated by the CanvasRenderingContext2D.textBaseline att",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 36578,
+    "match_content": "* The read-only **`actualBoundingBoxLeft`** property of the TextMetrics interface is a double giving the distance parallel to the baseline from the alignment point given by the CanvasRenderingContext2",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 36584,
+    "match_content": "* The read-only **`actualBoundingBoxRight`** property of the TextMetrics interface is a double giving the distance parallel to the baseline from the alignment point given by the CanvasRenderingContext",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 36590,
+    "match_content": "* The read-only **`alphabeticBaseline`** property of the TextMetrics interface is a double giving the distance from the horizontal line indicated by the CanvasRenderingContext2D.textBaseline property ",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 36596,
+    "match_content": "* The read-only **`emHeightAscent`** property of the TextMetrics interface returns the distance from the horizontal line indicated by the CanvasRenderingContext2D.textBaseline property to the top of t",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 36602,
+    "match_content": "* The read-only **`emHeightDescent`** property of the TextMetrics interface returns the distance from the horizontal line indicated by the CanvasRenderingContext2D.textBaseline property to the bottom ",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 36608,
+    "match_content": "* The read-only **`fontBoundingBoxAscent`** property of the TextMetrics interface returns the distance from the horizontal line indicated by the CanvasRenderingContext2D.textBaseline attribute, to the",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 36614,
+    "match_content": "* The read-only **`fontBoundingBoxDescent`** property of the TextMetrics interface returns the distance from the horizontal line indicated by the CanvasRenderingContext2D.textBaseline attribute to the",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 36620,
+    "match_content": "* The read-only **`hangingBaseline`** property of the TextMetrics interface is a double giving the distance from the horizontal line indicated by the CanvasRenderingContext2D.textBaseline property to ",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 36626,
+    "match_content": "* The read-only **`ideographicBaseline`** property of the TextMetrics interface is a double giving the distance from the horizontal line indicated by the CanvasRenderingContext2D.textBaseline property",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 44213,
+    "match_content": "type OffscreenRenderingContext = OffscreenCanvasRenderingContext2D | ImageBitmapRenderingContext | WebGLRenderingContext | WebGL2RenderingContext | GPUCanvasContext;",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 44225,
+    "match_content": "type RenderingContext = CanvasRenderingContext2D | ImageBitmapRenderingContext | WebGLRenderingContext | WebGL2RenderingContext | GPUCanvasContext;",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 44271,
+    "match_content": "type CanvasFontVariantCaps = \"all-petite-caps\" | \"all-small-caps\" | \"normal\" | \"petite-caps\" | \"small-caps\" | \"titling-caps\" | \"unicase\";",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 44312,
+    "match_content": "type GPUCanvasToneMappingMode = \"extended\" | \"standard\";",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 44553,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/roundRect) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 44557,
+    "match_content": "interface CanvasPathDrawingStyles {",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.dom.d.ts",
+    "line_number": 44558,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/setLineDash) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 445,
+    "match_content": "mode?: GPUCanvasToneMappingMode;",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2714,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/globalAlpha) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2716,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2721,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/drawImage) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2728,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/beginPath) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2730,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/clip) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2733,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/fill) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2736,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/isPointInPath) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2739,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/isPointInStroke) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2742,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/stroke) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2747,
+    "match_content": "interface CanvasFillStrokeStyles {",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2748,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/fillStyle) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2750,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/strokeStyle) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2752,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/createConicGradient) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2754,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/createLinearGradient) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2756,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/createPattern) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2758,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/createRadialGradient) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2763,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/filter) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2768,
+    "match_content": "* The **`CanvasGradient`** interface represents an opaque object describing a gradient. It is returned by the methods CanvasRenderingContext2D.createLinearGradient(), CanvasRenderingContext2D.createCo",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2787,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/createImageData) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2790,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/getImageData) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2792,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/putImageData) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2798,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/imageSmoothingEnabled) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2800,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/imageSmoothingQuality) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2805,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/arc) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2807,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/arcTo) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2809,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/bezierCurveTo) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2811,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/closePath) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2813,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/ellipse) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2815,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/lineTo) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2817,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/moveTo) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2819,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/quadraticCurveTo) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2821,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/rect) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2823,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/roundRect) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2827,
+    "match_content": "interface CanvasPathDrawingStyles {",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2828,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/lineCap) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2830,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/lineDashOffset) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2832,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/lineJoin) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2834,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/lineWidth) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2836,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/miterLimit) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2838,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/getLineDash) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2840,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/setLineDash) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2845,
+    "match_content": "* The **`CanvasPattern`** interface represents an opaque object describing a pattern, based on an image, a canvas, or a video, created by the CanvasRenderingContext2D.createPattern() method.",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2864,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/clearRect) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2866,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/fillRect) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2868,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/strokeRect) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2873,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/shadowBlur) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2875,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/shadowColor) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2877,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/shadowOffsetX) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2879,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/shadowOffsetY) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2884,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/isContextLost) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2886,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/reset) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2888,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/restore) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2890,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/save) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2895,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/fillText) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2897,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/measureText) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2899,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/strokeText) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2903,
+    "match_content": "interface CanvasTextDrawingStyles {",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2904,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/direction) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2906,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/font) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2908,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/fontKerning) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2910,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/fontStretch) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2912,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/fontVariantCaps) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2913,
+    "match_content": "fontVariantCaps: CanvasFontVariantCaps;",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2914,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/letterSpacing) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2916,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/textAlign) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2918,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/textBaseline) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2920,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/textRendering) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2922,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/wordSpacing) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2927,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/getTransform) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2929,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/resetTransform) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2931,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/rotate) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2933,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/scale) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2935,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/setTransform) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2938,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/transform) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 2940,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/translate) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 8095,
+    "match_content": "getContext(contextId: \"2d\", options?: any): OffscreenCanvasRenderingContext2D | null;",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 8118,
+    "match_content": "* The **`OffscreenCanvasRenderingContext2D`** interface is a CanvasRenderingContext2D rendering context for drawing to the bitmap of an OffscreenCanvas object. It is similar to the CanvasRenderingCont",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 8120,
+    "match_content": "* [MDN Reference](https://developer.mozilla.org/docs/Web/API/OffscreenCanvasRenderingContext2D)",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 8122,
+    "match_content": "interface OffscreenCanvasRenderingContext2D extends CanvasCompositing, CanvasDrawImage, CanvasDrawPath, CanvasFillStrokeStyles, CanvasFilters, CanvasImageData, CanvasImageSmoothing, CanvasPath, Canvas",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 8123,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/canvas) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 8127,
+    "match_content": "declare var OffscreenCanvasRenderingContext2D: {",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 8128,
+    "match_content": "prototype: OffscreenCanvasRenderingContext2D;",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 8129,
+    "match_content": "new(): OffscreenCanvasRenderingContext2D;",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 8133,
+    "match_content": "* The **`Path2D`** interface of the Canvas 2D API is used to declare a path that can then be used on a CanvasRenderingContext2D object. The path methods of the CanvasRenderingContext2D interface are a",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 10318,
+    "match_content": "* The **`TextMetrics`** interface represents the dimensions of a piece of text in the canvas; a TextMetrics instance can be retrieved using the CanvasRenderingContext2D.measureText() method.",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 10324,
+    "match_content": "* The read-only **`actualBoundingBoxAscent`** property of the TextMetrics interface is a double giving the distance from the horizontal line indicated by the CanvasRenderingContext2D.textBaseline attr",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 10330,
+    "match_content": "* The read-only **`actualBoundingBoxDescent`** property of the TextMetrics interface is a double giving the distance from the horizontal line indicated by the CanvasRenderingContext2D.textBaseline att",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 10336,
+    "match_content": "* The read-only **`actualBoundingBoxLeft`** property of the TextMetrics interface is a double giving the distance parallel to the baseline from the alignment point given by the CanvasRenderingContext2",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 10342,
+    "match_content": "* The read-only **`actualBoundingBoxRight`** property of the TextMetrics interface is a double giving the distance parallel to the baseline from the alignment point given by the CanvasRenderingContext",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 10348,
+    "match_content": "* The read-only **`alphabeticBaseline`** property of the TextMetrics interface is a double giving the distance from the horizontal line indicated by the CanvasRenderingContext2D.textBaseline property ",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 10354,
+    "match_content": "* The read-only **`emHeightAscent`** property of the TextMetrics interface returns the distance from the horizontal line indicated by the CanvasRenderingContext2D.textBaseline property to the top of t",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 10360,
+    "match_content": "* The read-only **`emHeightDescent`** property of the TextMetrics interface returns the distance from the horizontal line indicated by the CanvasRenderingContext2D.textBaseline property to the bottom ",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 10366,
+    "match_content": "* The read-only **`fontBoundingBoxAscent`** property of the TextMetrics interface returns the distance from the horizontal line indicated by the CanvasRenderingContext2D.textBaseline attribute, to the",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 10372,
+    "match_content": "* The read-only **`fontBoundingBoxDescent`** property of the TextMetrics interface returns the distance from the horizontal line indicated by the CanvasRenderingContext2D.textBaseline attribute to the",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 10378,
+    "match_content": "* The read-only **`hangingBaseline`** property of the TextMetrics interface is a double giving the distance from the horizontal line indicated by the CanvasRenderingContext2D.textBaseline property to ",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 10384,
+    "match_content": "* The read-only **`ideographicBaseline`** property of the TextMetrics interface is a double giving the distance from the horizontal line indicated by the CanvasRenderingContext2D.textBaseline property",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 15052,
+    "match_content": "type OffscreenRenderingContext = OffscreenCanvasRenderingContext2D | ImageBitmapRenderingContext | WebGLRenderingContext | WebGL2RenderingContext | GPUCanvasContext;",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 15079,
+    "match_content": "type CanvasFontVariantCaps = \"all-petite-caps\" | \"all-small-caps\" | \"normal\" | \"petite-caps\" | \"small-caps\" | \"titling-caps\" | \"unicase\";",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 15107,
+    "match_content": "type GPUCanvasToneMappingMode = \"extended\" | \"standard\";",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 15226,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/roundRect) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 15230,
+    "match_content": "interface CanvasPathDrawingStyles {",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/typescript/lib/lib.webworker.d.ts",
+    "line_number": 15231,
+    "match_content": "/** [MDN Reference](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/setLineDash) */",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/postcss/LICENSE",
+    "line_number": 3,
+    "match_content": "Copyright 2013 Andrey Sitnik <andrey@sitnik.es>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/postcss/package.json",
+    "line_number": 21,
+    "match_content": "\"author\": \"Andrey Sitnik <andrey@sitnik.es>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/p-locate/license",
+    "line_number": 3,
+    "match_content": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/p-locate/package.json",
+    "line_number": 10,
+    "match_content": "\"email\": \"sindresorhus@gmail.com\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/keyv/package.json",
+    "line_number": 33,
+    "match_content": "\"author\": \"Jared Wray <me@jaredwray.com> (http://jaredwray.com)\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/@typescript-eslint/scope-manager/dist/lib/webworker.js",
+    "line_number": 298,
+    "match_content": "['CanvasFillStrokeStyles', base_config_1.TYPE],",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/@typescript-eslint/scope-manager/dist/lib/webworker.js",
+    "line_number": 304,
+    "match_content": "['CanvasPathDrawingStyles', base_config_1.TYPE],",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/@typescript-eslint/scope-manager/dist/lib/webworker.js",
+    "line_number": 310,
+    "match_content": "['CanvasTextDrawingStyles', base_config_1.TYPE],",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/@typescript-eslint/scope-manager/dist/lib/webworker.js",
+    "line_number": 475,
+    "match_content": "['OffscreenCanvasRenderingContext2D', base_config_1.TYPE_VALUE],",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/@typescript-eslint/scope-manager/dist/lib/webworker.js",
+    "line_number": 725,
+    "match_content": "['CanvasFontVariantCaps', base_config_1.TYPE],",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/@typescript-eslint/scope-manager/dist/lib/webworker.js",
+    "line_number": 753,
+    "match_content": "['GPUCanvasToneMappingMode', base_config_1.TYPE],",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/@typescript-eslint/scope-manager/dist/lib/dom.js",
+    "line_number": 71,
+    "match_content": "['CanvasRenderingContext2DSettings', base_config_1.TYPE],",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/@typescript-eslint/scope-manager/dist/lib/dom.js",
+    "line_number": 613,
+    "match_content": "['CanvasCaptureMediaStreamTrack', base_config_1.TYPE_VALUE],",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/@typescript-eslint/scope-manager/dist/lib/dom.js",
+    "line_number": 617,
+    "match_content": "['CanvasFillStrokeStyles', base_config_1.TYPE],",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/@typescript-eslint/scope-manager/dist/lib/dom.js",
+    "line_number": 623,
+    "match_content": "['CanvasPathDrawingStyles', base_config_1.TYPE],",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/@typescript-eslint/scope-manager/dist/lib/dom.js",
+    "line_number": 626,
+    "match_content": "['CanvasRenderingContext2D', base_config_1.TYPE_VALUE],",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/@typescript-eslint/scope-manager/dist/lib/dom.js",
+    "line_number": 631,
+    "match_content": "['CanvasTextDrawingStyles', base_config_1.TYPE],",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/@typescript-eslint/scope-manager/dist/lib/dom.js",
+    "line_number": 1034,
+    "match_content": "['OffscreenCanvasRenderingContext2D', base_config_1.TYPE_VALUE],",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/@typescript-eslint/scope-manager/dist/lib/dom.js",
+    "line_number": 1598,
+    "match_content": "['CanvasFontVariantCaps', base_config_1.TYPE],",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/@typescript-eslint/scope-manager/dist/lib/dom.js",
+    "line_number": 1639,
+    "match_content": "['GPUCanvasToneMappingMode', base_config_1.TYPE],",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/@typescript-eslint/eslint-plugin/node_modules/ignore/package.json",
+    "line_number": 44,
+    "match_content": "\"url\": \"git@github.com:kaelzhang/node-ignore.git\"",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/@typescript-eslint/eslint-plugin/node_modules/ignore/LICENSE-MIT",
+    "line_number": 1,
+    "match_content": "Copyright (c) 2013 Kael Zhang <i@kael.me>, contributors",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint-plugin-react-hooks/cjs/eslint-plugin-react-hooks.production.js",
+    "line_number": 54105,
+    "match_content": "function getBooleanValueIfSimpleConstant(node) {",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint-plugin-react-hooks/cjs/eslint-plugin-react-hooks.production.js",
+    "line_number": 54281,
+    "match_content": "state.makeWhileTest(getBooleanValueIfSimpleConstant(node));",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint-plugin-react-hooks/cjs/eslint-plugin-react-hooks.production.js",
+    "line_number": 54292,
+    "match_content": "state.makeDoWhileTest(getBooleanValueIfSimpleConstant(node));",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint-plugin-react-hooks/cjs/eslint-plugin-react-hooks.production.js",
+    "line_number": 54297,
+    "match_content": "state.makeForTest(getBooleanValueIfSimpleConstant(node));",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint-plugin-react-hooks/cjs/eslint-plugin-react-hooks.development.js",
+    "line_number": 54278,
+    "match_content": "function getBooleanValueIfSimpleConstant(node) {",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint-plugin-react-hooks/cjs/eslint-plugin-react-hooks.development.js",
+    "line_number": 54454,
+    "match_content": "state.makeWhileTest(getBooleanValueIfSimpleConstant(node));",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint-plugin-react-hooks/cjs/eslint-plugin-react-hooks.development.js",
+    "line_number": 54465,
+    "match_content": "state.makeDoWhileTest(getBooleanValueIfSimpleConstant(node));",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint-plugin-react-hooks/cjs/eslint-plugin-react-hooks.development.js",
+    "line_number": 54470,
+    "match_content": "state.makeForTest(getBooleanValueIfSimpleConstant(node));",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/p-limit/license",
+    "line_number": 3,
+    "match_content": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/p-limit/package.json",
+    "line_number": 10,
+    "match_content": "\"email\": \"sindresorhus@gmail.com\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/natural-compare/README.md",
+    "line_number": 122,
+    "match_content": "Copyright (c) 2012-2015 Lauri Rooden &lt;lauri@rooden.ee&gt;",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/esutils/package.json",
+    "line_number": 21,
+    "match_content": "\"email\": \"utatane.tea@gmail.com\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/esutils/lib/code.js",
+    "line_number": 2,
+    "match_content": "Copyright (C) 2013-2014 Yusuke Suzuki <utatane.tea@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/esutils/lib/code.js",
+    "line_number": 3,
+    "match_content": "Copyright (C) 2014 Ivan Nikulin <ifaaan@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/esutils/lib/keyword.js",
+    "line_number": 2,
+    "match_content": "Copyright (C) 2013 Yusuke Suzuki <utatane.tea@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/esutils/lib/utils.js",
+    "line_number": 2,
+    "match_content": "Copyright (C) 2013 Yusuke Suzuki <utatane.tea@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/esutils/lib/ast.js",
+    "line_number": 2,
+    "match_content": "Copyright (C) 2013 Yusuke Suzuki <utatane.tea@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/find-up/license",
+    "line_number": 3,
+    "match_content": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/find-up/package.json",
+    "line_number": 10,
+    "match_content": "\"email\": \"sindresorhus@gmail.com\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/fdir/package.json",
+    "line_number": 44,
+    "match_content": "\"author\": \"thecodrr <thecodrr@protonmail.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/path-key/license",
+    "line_number": 3,
+    "match_content": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/path-key/package.json",
+    "line_number": 9,
+    "match_content": "\"email\": \"sindresorhus@gmail.com\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/brace-expansion/LICENSE",
+    "line_number": 3,
+    "match_content": "Copyright Julian Gruber <julian@juliangruber.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/brace-expansion/LICENSE",
+    "line_number": 5,
+    "match_content": "TypeScript port Copyright Isaac Z. Schlueter <i@izs.me>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/brace-expansion/package.json",
+    "line_number": 62,
+    "match_content": "\"url\": \"git+ssh://git@github.com/juliangruber/brace-expansion.git\"",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/json-stable-stringify-without-jsonify/package.json",
+    "line_number": 39,
+    "match_content": "\"email\": \"mail@substack.net\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/word-wrap/package.json",
+    "line_number": 8,
+    "match_content": "\"Danilo Sampaio <danilo.sampaio@gmail.com> (localhost:8080)\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/word-wrap/package.json",
+    "line_number": 9,
+    "match_content": "\"Fede Ramirez <i@2fd.me> (https://2fd.github.io)\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/word-wrap/package.json",
+    "line_number": 10,
+    "match_content": "\"Joe Hildebrand <joe-github@cursive.net> (https://twitter.com/hildjj)\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/word-wrap/package.json",
+    "line_number": 11,
+    "match_content": "\"Jon Schlinkert <jon.schlinkert@sellside.com> (http://twitter.com/jonschlinkert)\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/word-wrap/package.json",
+    "line_number": 15,
+    "match_content": "\"Zach Hale <zachhale@gmail.com> (http://zachhale.com)\"",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/json-buffer/package.json",
+    "line_number": 16,
+    "match_content": "\"author\": \"Dominic Tarr <dominic.tarr@gmail.com> (http://dominictarr.com)\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/LICENSE.md",
+    "line_number": 36,
+    "match_content": "> Copyright 2024 Justin Ridgewell <justin@ridgewell.name>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/LICENSE.md",
+    "line_number": 63,
+    "match_content": "> Copyright 2019 Justin Ridgewell <jridgewell@google.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/LICENSE.md",
+    "line_number": 432,
+    "match_content": "> Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/LICENSE.md",
+    "line_number": 487,
+    "match_content": "> Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/LICENSE.md",
+    "line_number": 504,
+    "match_content": "> Copyright (c) EGOIST <0x142857@gmail.com> (https://github.com/egoist)",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/LICENSE.md",
+    "line_number": 626,
+    "match_content": "> Copyright (c) 2013 Troy Goode <troygoode@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/LICENSE.md",
+    "line_number": 656,
+    "match_content": "> Copyright (c) 2018 Made With MOXY Lda <hello@moxy.studio>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/LICENSE.md",
+    "line_number": 744,
+    "match_content": "> Copyright (c) 2014 Jonathan Ong me@jongleberry.com",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/LICENSE.md",
+    "line_number": 916,
+    "match_content": "> Copyright (c) 2014-2017 Douglas Christopher Wilson <doug@somethingdoug.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/LICENSE.md",
+    "line_number": 944,
+    "match_content": "> Copyright 2014–present Olivier Lalonde <olalonde@gmail.com>, James Talmage <james@talmage.io>, Ruben Verborgh",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/LICENSE.md",
+    "line_number": 1097,
+    "match_content": "> Copyright (c) 2019 Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com), Paul Miller (https://paulmillr.com)",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/LICENSE.md",
+    "line_number": 1379,
+    "match_content": "> Copyright (c) Pooya Parsa <pooya@pi0.io>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/LICENSE.md",
+    "line_number": 1408,
+    "match_content": "> Copyright (c) Luke Edwards <luke.edwards05@gmail.com> (https://lukeed.com)",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/LICENSE.md",
+    "line_number": 1466,
+    "match_content": "> Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/LICENSE.md",
+    "line_number": 1496,
+    "match_content": "> Copyright (c) 2014-2017 TJ Holowaychuk <tj@vision-media.ca>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/LICENSE.md",
+    "line_number": 1526,
+    "match_content": "> Copyright (c) 2013 Jonathan Ong <me@jongleberry.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/LICENSE.md",
+    "line_number": 1527,
+    "match_content": "> Copyright (c) 2014 Douglas Christopher Wilson <doug@somethingdoug.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/LICENSE.md",
+    "line_number": 1555,
+    "match_content": "> Copyright (c) 2013-2019 Ivan Nikulin (ifaaan@gmail.com, https://github.com/inikulin)",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/LICENSE.md",
+    "line_number": 1584,
+    "match_content": "> Copyright (c) 2014 Jonathan Ong <me@jongleberry.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/LICENSE.md",
+    "line_number": 1585,
+    "match_content": "> Copyright (c) 2014-2017 Douglas Christopher Wilson <doug@somethingdoug.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/LICENSE.md",
+    "line_number": 1615,
+    "match_content": "> Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/LICENSE.md",
+    "line_number": 1697,
+    "match_content": "> Copyright Michael Ciniawsky <michael.ciniawsky@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/LICENSE.md",
+    "line_number": 1725,
+    "match_content": "> Copyright 2015-present Alexander Madyankin <alexander@madyankin.name>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/LICENSE.md",
+    "line_number": 1766,
+    "match_content": "> Copyright 2015 Mark Dalgleish <mark.john.dalgleish@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/LICENSE.md",
+    "line_number": 1822,
+    "match_content": "> Copyright (c) Ben Briggs <beneb.info@gmail.com> (http://beneb.info)",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/LICENSE.md",
+    "line_number": 1852,
+    "match_content": "> Copyright (c) Bogdan Chadkin <trysound@yandex.ru>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/LICENSE.md",
+    "line_number": 1913,
+    "match_content": "> Copyright (c) Luke Edwards <luke.edwards05@gmail.com> (lukeed.com)",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/LICENSE.md",
+    "line_number": 1942,
+    "match_content": "> Copyright (c) Kevin Mårtensson <kevinmartensson@gmail.com> (github.com/kevva)",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/LICENSE.md",
+    "line_number": 1959,
+    "match_content": "> Copyright (c) 2013 James Halliday (mail@substack.net)",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/LICENSE.md",
+    "line_number": 1998,
+    "match_content": "> Copyright (c) 2014 Jonathan Ong <me@jongleberry.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/LICENSE.md",
+    "line_number": 1999,
+    "match_content": "> Copyright (c) 2016 Douglas Christopher Wilson <doug@somethingdoug.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/LICENSE.md",
+    "line_number": 2093,
+    "match_content": "> Copyright (c) 2015 Douglas Christopher Wilson <doug@somethingdoug.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/LICENSE.md",
+    "line_number": 2123,
+    "match_content": "> Copyright (c) 2014 Nathan Rajlich <nathan@tootallnate.net>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/LICENSE.md",
+    "line_number": 2211,
+    "match_content": "> Copyright (c) 2011 Einar Otto Stangvik <einaros@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/dist/node/chunks/build.js",
+    "line_number": 1376,
+    "match_content": "const md4 = new WebAssembly.Module(Buffer.from(\"AGFzbQEAAAABCAJgAX8AYAAAAwUEAQAAAAUDAQABBhoFfwFBAAt/AUEAC38BQQALfwFBAAt/AUEACwciBARpbml0AAAGdXBkYXRlAAIFZmluYWwAAwZtZW1vcnkCAAqFEAQmAEGBxpS6BiQBQYnXtv5+",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/dist/node/chunks/node.js",
+    "line_number": 3265,
+    "match_content": "return A = \"AGFzbQEAAAABKwhgAX8Bf2AEf39/fwBgAAF/YAAAYAF/AGADf39/AX9gAn9/AX9gA39/fwADMTAAAQECAgICAgICAgICAgICAgICAgIAAwMDBAQAAAUAAAAAAAMDAwAGAAAABwAGAgUEBQFwAQEBBQMBAAEGDwJ/AUHA8gALfwBBwPIACwd6FQZtZW1v",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/vite/dist/node/chunks/node.js",
+    "line_number": 19815,
+    "match_content": "* @author Michael Ciniawsky @michael-ciniawsky <michael.ciniawsky@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/hermes-estree/package.json",
+    "line_number": 9,
+    "match_content": "\"url\": \"git@github.com:facebook/hermes.git\"",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/minimatch/package.json",
+    "line_number": 2,
+    "match_content": "\"author\": \"Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me)\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/minimatch/package.json",
+    "line_number": 8,
+    "match_content": "\"url\": \"git@github.com:isaacs/minimatch\"",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/estraverse/estraverse.js",
+    "line_number": 2,
+    "match_content": "Copyright (C) 2012-2013 Yusuke Suzuki <utatane.tea@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/estraverse/estraverse.js",
+    "line_number": 3,
+    "match_content": "Copyright (C) 2012 Ariya Hidayat <ariya.hidayat@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/estraverse/package.json",
+    "line_number": 13,
+    "match_content": "\"email\": \"utatane.tea@gmail.com\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/estraverse/gulpfile.js",
+    "line_number": 2,
+    "match_content": "Copyright (C) 2014 Yusuke Suzuki <utatane.tea@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod-validation-error/LICENSE",
+    "line_number": 3,
+    "match_content": "Copyright 2022 Causaly, Inc <front-end@causaly.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod-validation-error/package.json",
+    "line_number": 17,
+    "match_content": "\"email\": \"dimitris@jmike.gr\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod-validation-error/package.json",
+    "line_number": 23,
+    "match_content": "\"email\": \"hey@maestros.io\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/zod-validation-error/package.json",
+    "line_number": 28,
+    "match_content": "\"email\": \"nikostsompanides@gmail.com\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/acorn-jsx/package.json",
+    "line_number": 9,
+    "match_content": "\"email\": \"me@rreverser.com\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/@babel/core/lib/vendor/import-meta-resolve.js.map",
+    "line_number": 1,
+    "match_content": "{\"version\":3,\"names\":[\"_assert\",\"data\",\"require\",\"_fs\",\"_interopRequireWildcard\",\"_process\",\"_url\",\"_path\",\"_module\",\"_v\",\"_util\",\"e\",\"t\",\"WeakMap\",\"r\",\"n\",\"__esModule\",\"o\",\"i\",\"f\",\"__proto__\",\"defaul",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/@babel/helper-globals/data/browser-upper.json",
+    "line_number": 64,
+    "match_content": "\"CanvasCaptureMediaStream\",",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/@babel/helper-globals/data/browser-upper.json",
+    "line_number": 65,
+    "match_content": "\"CanvasCaptureMediaStreamTrack\",",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/@babel/helper-globals/data/browser-upper.json",
+    "line_number": 68,
+    "match_content": "\"CanvasRenderingContext2D\",",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/@babel/helper-globals/data/browser-upper.json",
+    "line_number": 501,
+    "match_content": "\"OffscreenCanvasRenderingContext2D\",",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/levn/package.json",
+    "line_number": 4,
+    "match_content": "\"author\": \"George Zahariev <z@georgezahariev.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/yocto-queue/license",
+    "line_number": 3,
+    "match_content": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/yocto-queue/package.json",
+    "line_number": 10,
+    "match_content": "\"email\": \"sindresorhus@gmail.com\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/json5/package.json",
+    "line_number": 42,
+    "match_content": "\"author\": \"Aseem Kishore <aseem.kishore@gmail.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/json5/package.json",
+    "line_number": 44,
+    "match_content": "\"Max Nanasy <max.nanasy@gmail.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/json5/package.json",
+    "line_number": 45,
+    "match_content": "\"Andrew Eisenberg <andrew@eisenberg.as>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/json5/package.json",
+    "line_number": 46,
+    "match_content": "\"Jordan Tucker <jordanbtucker@gmail.com>\"",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/update-browserslist-db/LICENSE",
+    "line_number": 3,
+    "match_content": "Copyright 2022 Andrey Sitnik <andrey@sitnik.ru> and other contributors",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/update-browserslist-db/package.json",
+    "line_number": 24,
+    "match_content": "\"author\": \"Andrey Sitnik <andrey@sitnik.ru>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/optionator/package.json",
+    "line_number": 4,
+    "match_content": "\"author\": \"George Zahariev <z@georgezahariev.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/convert-source-map/package.json",
+    "line_number": 28,
+    "match_content": "\"email\": \"thlorenz@gmx.de\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/uri-js/dist/es5/uri.all.js.map",
+    "line_number": 1,
+    "match_content": "{\"version\":3,\"file\":\"uri.all.js\",\"sources\":[\"../../src/index.ts\",\"../../src/schemes/urn-uuid.ts\",\"../../src/schemes/urn.ts\",\"../../src/schemes/mailto.ts\",\"../../src/schemes/wss.ts\",\"../../src/schemes/",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/uri-js/dist/es5/uri.all.min.js.map",
+    "line_number": 1,
+    "match_content": "{\"version\":3,\"sources\":[\"../../src/util.ts\",\"../../src/regexps-uri.ts\",\"../../node_modules/punycode/punycode.es6.js\",\"../../src/uri.ts\",\"../../src/schemes/ws.ts\",\"../../src/schemes/mailto.ts\",\"../../s",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/uri-js/dist/es5/uri.all.js",
+    "line_number": 712,
+    "match_content": "* @author <a href=\"mailto:gary.court@gmail.com\">Gary Court</a>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/uri-js/dist/esnext/uri.js",
+    "line_number": 5,
+    "match_content": "* @author <a href=\"mailto:gary.court@gmail.com\">Gary Court</a>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/uri-js/README.md",
+    "line_number": 12,
+    "match_content": "URI.parse(\"uri://user:pass@example.com:123/one/two.three?q1=a1&q2=a2#body\");",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/uri-js/README.md",
+    "line_number": 126,
+    "match_content": "URI.parse(\"mailto:alpha@example.com,bravo@example.com?subject=SUBSCRIBE&body=Sign%20me%20up!\");",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/uri-js/README.md",
+    "line_number": 130,
+    "match_content": "//\tto : [\"alpha@example.com\", \"bravo@example.com\"],",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/uri-js/README.md",
+    "line_number": 137,
+    "match_content": "to : [\"alpha@example.com\"],",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/uri-js/README.md",
+    "line_number": 141,
+    "match_content": "cc : \"charlie@example.com\"",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/uri-js/README.md",
+    "line_number": 143,
+    "match_content": "}) === \"mailto:alpha@example.com?cc=charlie@example.com&subject=REMOVE&body=Please%20remove%20me\"",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/uri-js/yarn.lock",
+    "line_number": 1617,
+    "match_content": "integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/uri-js/package.json",
+    "line_number": 55,
+    "match_content": "\"author\": \"Gary Court <gary.court@gmail.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/cross-spawn/LICENSE",
+    "line_number": 3,
+    "match_content": "Copyright (c) 2018 Made With MOXY Lda <hello@moxy.studio>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/cross-spawn/package.json",
+    "line_number": 15,
+    "match_content": "\"author\": \"André Cruz <andre@moxy.studio>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/cross-spawn/package.json",
+    "line_number": 19,
+    "match_content": "\"url\": \"git@github.com:moxystudio/node-cross-spawn.git\"",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/espree/dist/espree.cjs",
+    "line_number": 1008,
+    "match_content": "* Babel-ESLint is Copyright 2014-2015 Sebastian McKenzie <sebmck@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/espree/package.json",
+    "line_number": 4,
+    "match_content": "\"author\": \"Nicholas C. Zakas <nicholas+npm@nczconsulting.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/espree/espree.js",
+    "line_number": 13,
+    "match_content": "* Babel-ESLint is Copyright 2014-2015 Sebastian McKenzie <sebmck@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint/package.json",
+    "line_number": 4,
+    "match_content": "\"author\": \"Nicholas C. Zakas <nicholas+npm@nczconsulting.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint/lib/types/universal.d.ts",
+    "line_number": 3,
+    "match_content": "* @author 唯然<weiran.zsd@outlook.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js",
+    "line_number": 117,
+    "match_content": "function getBooleanValueIfSimpleConstant(node) {",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js",
+    "line_number": 328,
+    "match_content": "state.makeWhileTest(getBooleanValueIfSimpleConstant(node));",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js",
+    "line_number": 340,
+    "match_content": "state.makeDoWhileTest(getBooleanValueIfSimpleConstant(node));",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js",
+    "line_number": 346,
+    "match_content": "state.makeForTest(getBooleanValueIfSimpleConstant(node));",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint/lib/universal.js",
+    "line_number": 3,
+    "match_content": "* @author 唯然<weiran.zsd@outlook.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint/lib/rules/no-compare-neg-zero.js",
+    "line_number": 3,
+    "match_content": "* @author Aladdin-ADD <hh_2013@foxmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint/lib/rules/lines-between-class-members.js",
+    "line_number": 3,
+    "match_content": "* @author 薛定谔的猫<hh_2013@foxmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint/lib/rules/for-direction.js",
+    "line_number": 3,
+    "match_content": "* @author Aladdin-ADD<hh_2013@foxmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint/lib/rules/no-extra-bind.js",
+    "line_number": 3,
+    "match_content": "* @author Bence Dányi <bence@danyi.me>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint/lib/rules/max-lines-per-function.js",
+    "line_number": 3,
+    "match_content": "* @author Pete Ward <peteward44@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/eslint/lib/rules/getter-return.js",
+    "line_number": 3,
+    "match_content": "* @author Aladdin-ADD(hh_2013@foxmail.com)",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/esquery/dist/esquery.min.js.map",
+    "line_number": 1,
+    "match_content": "{\"version\":3,\"file\":\"esquery.min.js\",\"sources\":[\"../node_modules/estraverse/estraverse.js\",\"../parser.js\",\"../esquery.js\"],\"sourcesContent\":[\"/*\\n  Copyright (C) 2012-2013 Yusuke Suzuki <utatane.tea@g",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/esquery/dist/esquery.js",
+    "line_number": 85,
+    "match_content": "Copyright (C) 2012-2013 Yusuke Suzuki <utatane.tea@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/esquery/dist/esquery.js",
+    "line_number": 86,
+    "match_content": "Copyright (C) 2012 Ariya Hidayat <ariya.hidayat@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/esquery/dist/esquery.esm.js",
+    "line_number": 79,
+    "match_content": "Copyright (C) 2012-2013 Yusuke Suzuki <utatane.tea@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/esquery/dist/esquery.esm.js",
+    "line_number": 80,
+    "match_content": "Copyright (C) 2012 Ariya Hidayat <ariya.hidayat@gmail.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/esquery/dist/esquery.esm.min.js.map",
+    "line_number": 1,
+    "match_content": "{\"version\":3,\"file\":\"esquery.esm.min.js\",\"sources\":[\"../node_modules/estraverse/estraverse.js\",\"../parser.js\",\"../esquery.js\"],\"sourcesContent\":[\"/*\\n  Copyright (C) 2012-2013 Yusuke Suzuki <utatane.t",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/esquery/package.json",
+    "line_number": 4,
+    "match_content": "\"author\": \"Joel Feenstra <jrfeenst+esquery@gmail.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/fast-levenshtein/package.json",
+    "line_number": 37,
+    "match_content": "\"author\": \"Ramesh Nair <ram@hiddentao.com> (http://www.hiddentao.com/)\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/yallist/package.json",
+    "line_number": 27,
+    "match_content": "\"author\": \"Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/@jridgewell/sourcemap-codec/LICENSE",
+    "line_number": 1,
+    "match_content": "Copyright 2024 Justin Ridgewell <justin@ridgewell.name>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/@jridgewell/sourcemap-codec/package.json",
+    "line_number": 61,
+    "match_content": "\"author\": \"Justin Ridgewell <justin@ridgewell.name>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/@jridgewell/trace-mapping/LICENSE",
+    "line_number": 1,
+    "match_content": "Copyright 2024 Justin Ridgewell <justin@ridgewell.name>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/@jridgewell/trace-mapping/package.json",
+    "line_number": 61,
+    "match_content": "\"author\": \"Justin Ridgewell <justin@ridgewell.name>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/@jridgewell/gen-mapping/LICENSE",
+    "line_number": 1,
+    "match_content": "Copyright 2024 Justin Ridgewell <justin@ridgewell.name>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/@jridgewell/gen-mapping/package.json",
+    "line_number": 61,
+    "match_content": "\"author\": \"Justin Ridgewell <justin@ridgewell.name>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/@jridgewell/resolve-uri/LICENSE",
+    "line_number": 1,
+    "match_content": "Copyright 2019 Justin Ridgewell <jridgewell@google.com>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/@jridgewell/resolve-uri/package.json",
+    "line_number": 11,
+    "match_content": "\"author\": \"Justin Ridgewell <justin@ridgewell.name>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/@jridgewell/remapping/LICENSE",
+    "line_number": 1,
+    "match_content": "Copyright 2024 Justin Ridgewell <justin@ridgewell.name>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/@jridgewell/remapping/package.json",
+    "line_number": 62,
+    "match_content": "\"author\": \"Justin Ridgewell <justin@ridgewell.name>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/caniuse-lite/package.json",
+    "line_number": 11,
+    "match_content": "\"email\": \"beneb.info@gmail.com\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/deep-is/LICENSE",
+    "line_number": 1,
+    "match_content": "Copyright (c) 2012, 2013 Thorsten Lorenz <thlorenz@gmx.de>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/deep-is/LICENSE",
+    "line_number": 2,
+    "match_content": "Copyright (c) 2012 James Halliday <mail@substack.net>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/deep-is/README.markdown",
+    "line_number": 63,
+    "match_content": "Copyright (c) 2012, 2013 Thorsten Lorenz <thlorenz@gmx.de>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/deep-is/README.markdown",
+    "line_number": 64,
+    "match_content": "Copyright (c) 2012 James Halliday <mail@substack.net>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/deep-is/package.json",
+    "line_number": 28,
+    "match_content": "\"email\": \"thlorenz@gmx.de\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/which/package.json",
+    "line_number": 2,
+    "match_content": "\"author\": \"Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me)\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/ajv/dist/ajv.bundle.js",
+    "line_number": 5959,
+    "match_content": "* @author <a href=\"mailto:gary.court@gmail.com\">Gary Court</a>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/ajv/README.md",
+    "line_number": 462,
+    "match_content": "email: 'joe.bloggs@example.com'",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/ajv/README.md",
+    "line_number": 1495,
+    "match_content": "Please report any unacceptable behaviour to ajv.validator@gmail.com - it will be reviewed by the project team.",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/type-check/package.json",
+    "line_number": 4,
+    "match_content": "\"author\": \"George Zahariev <z@georgezahariev.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/locate-path/license",
+    "line_number": 3,
+    "match_content": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/locate-path/package.json",
+    "line_number": 10,
+    "match_content": "\"email\": \"sindresorhus@gmail.com\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/fsevents/package.json",
+    "line_number": 35,
+    "match_content": "\"email\": \"pip@pipobscure.com\"",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/fsevents/package.json",
+    "line_number": 39,
+    "match_content": "\"email\": \"info@bnoordhuis.nl\"",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/fsevents/package.json",
+    "line_number": 43,
+    "match_content": "\"email\": \"elan.shanker@gmail.com\"",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/fsevents/package.json",
+    "line_number": 47,
+    "match_content": "\"email\": \"mbajtoss@gmail.com\"",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/shebang-command/license",
+    "line_number": 3,
+    "match_content": "Copyright (c) Kevin Mårtensson <kevinmartensson@gmail.com> (github.com/kevva)",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/shebang-command/package.json",
+    "line_number": 9,
+    "match_content": "\"email\": \"kevinmartensson@gmail.com\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/debug/LICENSE",
+    "line_number": 3,
+    "match_content": "Copyright (c) 2014-2017 TJ Holowaychuk <tj@vision-media.ca>",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/debug/README.md",
+    "line_number": 461,
+    "match_content": "Copyright (c) 2014-2017 TJ Holowaychuk &lt;tj@vision-media.ca&gt;",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/debug/package.json",
+    "line_number": 21,
+    "match_content": "\"TJ Holowaychuk <tj@vision-media.ca>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/debug/package.json",
+    "line_number": 22,
+    "match_content": "\"Nathan Rajlich <nathan@tootallnate.net> (http://n8.io)\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/debug/package.json",
+    "line_number": 23,
+    "match_content": "\"Andrew Rhyne <rhyneandrew@gmail.com>\"",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/glob-parent/LICENSE",
+    "line_number": 3,
+    "match_content": "Copyright (c) 2015, 2019 Elan Shanker, 2021 Blaine Bublitz <blaine.bublitz@gmail.com>, Eric Schoffstall <yo@contra.io> and other contributors",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/glob-parent/package.json",
+    "line_number": 5,
+    "match_content": "\"author\": \"Gulp Team <team@gulpjs.com> (https://gulpjs.com/)\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/glob-parent/package.json",
+    "line_number": 8,
+    "match_content": "\"Blaine Bublitz <blaine.bublitz@gmail.com>\"",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/lightningcss/package.json",
+    "line_number": 89,
+    "match_content": "\"wasm:build\": \"cargo build --target wasm32-unknown-unknown -p lightningcss_node && wasm-opt target/wasm32-unknown-unknown/debug/lightningcss_node.wasm --asyncify --pass-arg=asyncify-imports@env.await_",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/lightningcss/package.json",
+    "line_number": 90,
+    "match_content": "\"wasm:build-release\": \"cargo build --target wasm32-unknown-unknown -p lightningcss_node --release && wasm-opt target/wasm32-unknown-unknown/release/lightningcss_node.wasm --asyncify --pass-arg=asyncif",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 6,
+    "match_content": "\"author\": \"Valentin 7rulnik Semirulnik <v7rulnik@gmail.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 8,
+    "match_content": "\"Nick Fitzgerald <nfitzgerald@mozilla.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 9,
+    "match_content": "\"Tobias Koppers <tobias.koppers@googlemail.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 10,
+    "match_content": "\"Duncan Beevers <duncan@dweebd.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 11,
+    "match_content": "\"Stephen Crane <scrane@mozilla.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 12,
+    "match_content": "\"Ryan Seddon <seddon.ryan@gmail.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 13,
+    "match_content": "\"Miles Elam <miles.elam@deem.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 14,
+    "match_content": "\"Mihai Bazon <mihai.bazon@gmail.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 15,
+    "match_content": "\"Michael Ficarra <github.public.email@michael.ficarra.me>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 16,
+    "match_content": "\"Todd Wolfson <todd@twolfson.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 17,
+    "match_content": "\"Alexander Solovyov <alexander@solovyov.net>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 18,
+    "match_content": "\"Felix Gnass <fgnass@gmail.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 19,
+    "match_content": "\"Conrad Irwin <conrad.irwin@gmail.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 20,
+    "match_content": "\"usrbincc <usrbincc@yahoo.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 21,
+    "match_content": "\"David Glasser <glasser@davidglasser.net>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 22,
+    "match_content": "\"Chase Douglas <chase@newrelic.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 23,
+    "match_content": "\"Evan Wallace <evan.exe@gmail.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 24,
+    "match_content": "\"Heather Arthur <fayearthur@gmail.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 25,
+    "match_content": "\"Hugh Kennedy <hughskennedy@gmail.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 26,
+    "match_content": "\"David Glasser <glasser@davidglasser.net>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 27,
+    "match_content": "\"Simon Lydell <simon.lydell@gmail.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 28,
+    "match_content": "\"Jmeas Smith <jellyes2@gmail.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 29,
+    "match_content": "\"Michael Z Goddard <mzgoddard@gmail.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 30,
+    "match_content": "\"azu <azu@users.noreply.github.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 31,
+    "match_content": "\"John Gozde <john@gozde.ca>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 32,
+    "match_content": "\"Adam Kirkton <akirkton@truefitinnovation.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 33,
+    "match_content": "\"Chris Montgomery <christopher.montgomery@dowjones.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 34,
+    "match_content": "\"J. Ryan Stinnett <jryans@gmail.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 35,
+    "match_content": "\"Jack Herrington <jherrington@walmartlabs.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 36,
+    "match_content": "\"Chris Truter <jeffpalentine@gmail.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 37,
+    "match_content": "\"Daniel Espeset <daniel@danielespeset.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 38,
+    "match_content": "\"Jamie Wong <jamie.lf.wong@gmail.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 39,
+    "match_content": "\"Eddy Bruël <ejpbruel@mozilla.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 40,
+    "match_content": "\"Hawken Rives <hawkrives@gmail.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 41,
+    "match_content": "\"Gilad Peleg <giladp007@gmail.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 42,
+    "match_content": "\"djchie <djchie.dev@gmail.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 43,
+    "match_content": "\"Gary Ye <garysye@gmail.com>\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/source-map-js/package.json",
+    "line_number": 44,
+    "match_content": "\"Nicolas Lalevée <nicolas.lalevee@hibnet.org>\"",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../ui/node_modules/isexe/package.json",
+    "line_number": 20,
+    "match_content": "\"author\": \"Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)\",",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../test_secrets.txt",
+    "line_number": 2,
+    "match_content": "Another line with a fake aws key: AKIAIOSFODNN7EXAMPLE",
+    "rule_name": "AWS Access Key",
+    "severity": "CRITICAL"
+  },
+  {
+    "file_path": "../test_secrets.txt",
+    "line_number": 4,
+    "match_content": "My email is test@example.com which is PII.",
+    "rule_name": "Email Address (PII)",
+    "severity": "LOW"
+  },
+  {
+    "file_path": "../test_secrets.txt",
+    "line_number": 5,
+    "match_content": "And here is a github token: ghp_123456789012345678901234567890123456",
+    "rule_name": "GitHub Token",
+    "severity": "CRITICAL"
+  }
+]
