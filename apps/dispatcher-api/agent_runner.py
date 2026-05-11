@@ -2,9 +2,10 @@ import asyncio
 import time
 from typing import Callable
 from agents.antigravity_context import AntigravityContextBuilder
-import subprocess
-import json
 import os
+import glob
+from telemetry import log_agent_execution
+from soc2_audit import log_soc2_event
 import glob
 from telemetry import log_agent_execution
 
@@ -118,6 +119,15 @@ async def run_developer_agent(task_id: str, worktree_path: str, title: str, desc
             
             # Telemetry Log
             log_agent_execution(task_id, "Developer", ttft_ms, len(response) // 4, success=True, retries=attempt)
+            
+            # SOC2 Immutable Audit Log
+            log_soc2_event("AGENT_CODE_GENERATION", {
+                "task_id": task_id,
+                "model": model_name,
+                "prompt_length": len(prompt),
+                "response_length": len(response),
+                "status": "success"
+            })
             
             with open(os.path.join(worktree_path, "agent_output.md"), "w") as f:
                 f.write(response)

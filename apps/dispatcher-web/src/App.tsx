@@ -1,11 +1,12 @@
 import React from 'react';
 import Board from './components/Board';
 import ActivityFeed from './components/ActivityFeed';
+import { RBACProvider } from './components/RBAC';
 
 
 function App() {
   return (
-    <>
+    <RBACProvider>
       <header className="app-header">
         <div style={{ display: 'flex', alignItems: 'baseline', gap: '1rem' }}>
           <h1 className="app-title">AI Dispatcher</h1>
@@ -32,7 +33,7 @@ function App() {
         <Board />
         <ActivityFeed />
       </main>
-    </>
+    </RBACProvider>
   );
 }
 
