@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  dispatcher-web:
+    build:
+      context: ./apps/dispatcher-web
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+    depends_on:
+      - dispatcher-api
+
+  dispatcher-api:
+    build:
+      context: ./apps/dispatcher-api
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./apps/dispatcher-api:/app
+      - ./packages/security-core:/packages/security-core  # Mount Rust core for Python to invoke
+    environment:
+      - DB_PATH=/app/dispatcher.db
+    depends_on:
+      - knowledge-api
+
+  knowledge-api:
+    build:
+      context: ./apps/knowledge-api
+      dockerfile: Dockerfile
+    ports:
+      - "8001:8001"
+    environment:
+      - CHROMA_DB_URL=http://vector-db:8000
+    depends_on:
+      - vector-db
+
+  vector-db:
+    image: chromadb/chroma:latest
+    ports:
+      - "8002:8000"
+    volumes:
+      - chroma-data:/chroma/chroma
+
+volumes:
+  chroma-data:

@@ -1,0 +1,48 @@
+name: Enterprise CI Pipeline
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  test-and-build:
+    name: Omni-Agent Mesh CI
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Set up Rust
+      uses: dtolnay/rust-toolchain@stable
+      with:
+        components: clippy, rustfmt
+
+    - name: Install Monorepo Dependencies
+      run: npm install
+
+    - name: Turbo Lint & Code Quality
+      run: npm run turbo -- run lint --continue
+
+    - name: Turbo Build
+      run: npm run turbo -- run build
+
+    - name: Turbo Test (Pytest + Vitest + Cargo Test)
+      run: npm run turbo -- run test
+
+    - name: Aegis Auto-Scan (Dogfooding)
+      run: |
+        cd packages/security-core
+        cargo run -- -p ../../ -f github
