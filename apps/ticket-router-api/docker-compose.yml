@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  ml_api:
+    build: .
+    container_name: ml_support_api
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+    restart: unless-stopped
+    volumes:
+      - ./src/models/saved:/app/src/models/saved:ro

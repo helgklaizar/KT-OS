@@ -1,0 +1,22 @@
+[
+  {
+    "text": "I received the wrong item in my package yesterday.",
+    "expected_department": "DELIVERY"
+  },
+  {
+    "text": "Please cancel my account, I am not using the service anymore.",
+    "expected_department": "CANCEL"
+  },
+  {
+    "text": "I was overcharged on my last invoice, please refund me immediately!",
+    "expected_department": "REFUND"
+  },
+  {
+    "text": "How do I update my credit card information?",
+    "expected_department": "PAYMENT"
+  },
+  {
+    "text": "I want to talk to a human agent, the bot is useless.",
+    "expected_department": "CONTACT"
+  }
+]

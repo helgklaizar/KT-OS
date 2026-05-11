@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+ENV/
+env/
+.env
+
+# AI & DB
+src/data/chroma_db/
+src/data/chroma_db_real_test/
+src/data/chroma_db_test/
+src/data/db/company.db
+catboost_info/
+
+# Internal AI Kitchen
+.gemini/
+.ai/
+.agents/
+
+# OS
+.DS_Store
