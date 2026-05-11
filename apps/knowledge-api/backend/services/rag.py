@@ -12,37 +12,37 @@ COLLECTION_NAME = "knowledge_mesh_core"
 
 class RAGService:
     def __init__(self):
-        # 1. Подключаемся к локальному хранилищу
+        # 1. Connect to local storage
         self.client = QdrantClient(path=QDRANT_PATH)
         
-        # Интеллектуальный выбор провайдера (Local-First: Ollama -> Fake)
+        # Intelligent provider selection (Local-First: Ollama -> Fake)
         self.llm, self.embeddings = get_llm_and_embeddings()
         
-        # 2. Инициализируем Vector Store
+        # 2. Initialize Vector Store
         self.vector_store = Qdrant(
             client=self.client,
             collection_name=COLLECTION_NAME,
             embeddings=self.embeddings
         )
         
-        # 3. Настраиваем Retriever (поиск топ-3 кусков)
+        # 3. Configure Retriever (search top-3 chunks)
         self.retriever = self.vector_store.as_retriever(search_kwargs={"k": 3})
         
-        # 5. Собираем Промпт
-        template = """Ты — интеллектуальный агент корпоративной базы знаний (Knowledge Mesh).
-Используй предоставленный ниже контекст для ответа на вопрос пользователя.
-Если ответа нет в контексте, честно скажи, что не знаешь, не выдумывай (no hallucinations).
-Отвечай структурированно, профессионально и по делу.
+        # 5. Build Prompt
+        template = """You are an intelligent agent for the enterprise Knowledge Mesh.
+Use the provided context to answer the user's question.
+If the answer is not in the context, honestly state that you do not know (no hallucinations).
+Answer in a structured, professional, and concise manner.
 
-Контекст:
+Context:
 {context}
 
-Вопрос: {question}
+Question: {question}
 
-Ответ:"""
+Answer:"""
         self.prompt = ChatPromptTemplate.from_template(template)
         
-        # 6. Собираем LangChain LCEL Pipeline
+        # 6. Assemble LangChain LCEL Pipeline
         self.chain = (
             {"context": self.retriever | self._format_docs, "question": RunnablePassthrough()}
             | self.prompt
@@ -54,14 +54,14 @@ class RAGService:
         return "\n\n".join(doc.page_content for doc in docs)
 
     def ask(self, query: str) -> dict:
-        # Получаем исходные документы (чтобы вернуть их как sources)
+        # Get source documents (to return them as sources)
         docs = self.retriever.invoke(query)
         sources = [doc.metadata.get('source', 'Unknown') for doc in docs]
         
-        # Генерируем ответ
+        # Generate answer
         answer = self.chain.invoke(query)
         
-        # Убираем дубликаты из sources
+        # Remove duplicates from sources
         unique_sources = list(set(sources))
         
         return {
@@ -70,9 +70,9 @@ class RAGService:
         }
 
     def search(self, query: str) -> list[dict]:
-        # Возвращает сырые документы без обработки LLM (полезно для Agent-BOS)
+        # Returns raw documents without LLM processing (useful for Agent-BOS)
         docs = self.retriever.invoke(query)
         return [{"content": doc.page_content, "source": doc.metadata.get('source', 'Unknown')} for doc in docs]
 
-# Singleton экземпляр для переиспользования в FastAPI
+# Singleton instance for reuse in FastAPI
 rag_service = RAGService()

@@ -33,7 +33,7 @@
 ## 🧠 Concept & Philosophy
 
 > 🍏 **Part of the Mac AI Ecosystem Initiative**
-> *Этот проект является частью масштабной инициативы по созданию недостающих хардкорных инструментов и расширений для AI-разработки на Apple Silicon.*
+> *This project is part of a large-scale initiative to create missing hardcore tools and extensions for AI development natively on Apple Silicon.*
 
 Traditional autonomous agents write code directly into your repository, often breaking the main branch, hallucinating context, or leaking credentials. **Know-Task-OS** solves this by enforcing a strict, visual, step-by-step pipeline:
 
@@ -74,7 +74,10 @@ The central command hub. Acting as the Product Owner interface, you drag and dro
 A robust Retrieval-Augmented Generation engine. When a task requires architectural changes, the Knowledge Agent semantically indexes your codebase and internal wikis (using ChromaDB/Qdrant), providing the Developer Agent with surgical, high-fidelity context.
 
 ### 3. Aegis Gatekeeper (Security)
-An offline-first, strict QA and Security module powered by Rust (`security-core`). It intercepts the Developer Agent's output. If the agent attempts to hardcode an API key or push un-tested spaghetti code, Aegis rejects the payload, pushing the Kanban card back to "In Progress" with a detailed error log.
+An offline-first, strict QA and Security module powered by Rust (`security-core`). It intercepts the Developer Agent's output. If the agent attempts to hardcode an API key or push un-tested spaghetti code, Aegis rejects the payload and initiates **Cross-Agent Negotiation**, sending the error log directly back to the Developer Agent for an autonomous retry.
+
+### 4. Dynamic Agent Skills & Rules
+The autonomous task management relies on a dynamic skill system. Agents can hot-swap JSON schemas and tools from the global `antigravity-bar` skill registry at runtime based on the task context. The entire execution is governed by a strict set of global rules to ensure absolute determinism.
 
 ---
 

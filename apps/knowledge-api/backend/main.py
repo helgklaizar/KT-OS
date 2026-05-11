@@ -43,12 +43,12 @@ def health_check():
 @app.post("/api/chat", response_model=ChatResponse)
 def chat_endpoint(request: ChatRequest):
     try:
-        # Пропускаем запрос через оркестратора (LangGraph) с поддержкой памяти
+        # Pass request through LangGraph orchestrator with memory support
         thread_id = request.user_id if request.user_id else "default_thread"
         answer = run_agent(request.query, thread_id)
         return ChatResponse(
             answer=answer,
-            sources=[] # В рамках демо LangGraph пока отдает только текст
+            sources=[] # In this demo, LangGraph only returns text
         )
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
