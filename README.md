@@ -11,7 +11,7 @@
   <h1>🌌 Know-Task-OS</h1>
   
   <p><b>The ultimate Local-First Agentic Mesh and Visual Operating System.</b></p>
-  <p><i>Know-Task-OS is a straight-to-the-point Business Operating System that fuses autonomous task management with semantic knowledge retrieval. By combining a visual Kanban dispatcher with offline RAG capabilities and Rust-based security gatekeepers, it creates a robust environment for managing software operations.</i></p>
+  <p><i>An autonomous Business Operating System. It combines a visual Kanban board with local AI agents and a Rust security scanner to write, test, and manage code completely offline.</i></p>
 
 </div>
 
@@ -123,7 +123,7 @@ graph TD;
 ## 🏷 Tags & Meta
 
 **GitHub Description:**  
-`A straight-to-the-point Business Operating System that fuses autonomous task management with semantic knowledge retrieval. Features local MLX execution and Rust security gates.`
+`An autonomous Business Operating System. It combines a visual Kanban board with local AI agents and a Rust security scanner to write, test, and manage code completely offline.`
 
 **Repository Tags:**  
 `knowledge-base` `task-management` `business-os` `mlx` `apple-silicon` `fastapi` `rust`
