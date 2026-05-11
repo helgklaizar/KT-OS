@@ -160,11 +160,44 @@ async def run_developer_agent(task_id: str, worktree_path: str, title: str, desc
             break  # Fatal error, stop loop
             
     else:
-        # Executed if the loop finishes without breaking (failed all 3 retries)
+        # STUCK PROTOCOL 2.0
+        log_callback({
+            "timestamp": time.strftime("%H:%M:%S"),
+            "agent": "System",
+            "actionType": "warning",
+            "message": f"Task stuck after {max_retries} attempts. Initiating Stuck Protocol 2.0..."
+        })
+        
+        # Invoke Knowledge Agent for emergency consultation
+        try:
+            emergency_query = f"The developer agent is stuck trying to fix these security violations: {security_feedback}. Provide an exact code fix strategy."
+            resp = httpx.post("http://localhost:8000/api/search", json={"query": emergency_query}, timeout=10.0)
+            results = resp.json().get("context", [])
+            emergency_context = "\n\n".join([r['content'] for r in results])
+            
+            log_callback({
+                "timestamp": time.strftime("%H:%M:%S"),
+                "agent": "Knowledge",
+                "actionType": "thought",
+                "message": f"Emergency context retrieved. Escalating to Human-in-the-loop with suggested fix strategy."
+            })
+            
+            # Write emergency context to worktree for human review
+            with open(os.path.join(worktree_path, "EMERGENCY_FIX_STRATEGY.md"), "w") as f:
+                f.write(f"# Stuck Protocol 2.0 Escalation\n\n## Failing Violations\n{security_feedback}\n\n## Suggested Knowledge Base Strategy\n{emergency_context}")
+                
+        except Exception as e:
+            log_callback({
+                "timestamp": time.strftime("%H:%M:%S"),
+                "agent": "System",
+                "actionType": "error",
+                "message": f"Knowledge agent offline: {e}"
+            })
+            
         log_callback({
             "timestamp": time.strftime("%H:%M:%S"),
             "agent": "System",
             "actionType": "error",
-            "message": f"Task failed! Developer could not fix security violations after {max_retries} attempts."
+            "message": "Human-in-the-loop intervention required. Check EMERGENCY_FIX_STRATEGY.md in the worktree."
         })
 

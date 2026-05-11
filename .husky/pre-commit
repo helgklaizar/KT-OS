@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "🛡️  Running Aegis Gatekeeper Security Scan (Agentic CI/CD Hook)..."
+
+cargo run --manifest-path packages/security-core/Cargo.toml --quiet -- -p . -f text
+
+# If cargo run exits with non-zero, block the commit
+if [ $? -ne 0 ]; then
+  echo "❌ Security Violations Found! Commit Rejected."
+  echo "Please fix the security leaks before pushing."
+  exit 1
+fi
+
+echo "✅ Security Scan Passed. Code is safe to commit."

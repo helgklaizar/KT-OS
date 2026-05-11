@@ -34,13 +34,13 @@ jobs:
       run: npm install
 
     - name: Turbo Lint & Code Quality
-      run: npm run turbo -- run lint --continue
+      run: npx turbo run lint --continue
 
     - name: Turbo Build
-      run: npm run turbo -- run build
+      run: npx turbo run build
 
     - name: Turbo Test (Pytest + Vitest + Cargo Test)
-      run: npm run turbo -- run test
+      run: npx turbo run test
 
     - name: Aegis Auto-Scan (Dogfooding)
       run: |
