@@ -11,7 +11,7 @@
   <h1>🌌 Know-Task-OS</h1>
   
   <p><b>The ultimate Local-First Agentic Mesh and Visual Operating System.</b></p>
-  <p><i>A collaborative Kanban task management system designed for both human teams and autonomous AI agents. Features offline MLX execution and Rust security scanning.</i></p>
+  <p><i>A collaborative Kanban platform for human teams and autonomous AI agents. Features autonomous task management, a dynamic agent skill system, and strict rule enforcement.</i></p>
 
 </div>
 
@@ -123,7 +123,7 @@ graph TD;
 ## 🏷 Tags & Meta
 
 **GitHub Description:**  
-`A collaborative Kanban task management system designed for both human teams and autonomous AI agents.`
+`A collaborative Kanban platform for human teams and autonomous AI agents. Features autonomous task management, a dynamic agent skill system, and strict rule enforcement.`
 
 **Repository Tags:**  
 `knowledge-base` `task-management` `business-os` `mlx` `apple-silicon` `fastapi` `rust`
