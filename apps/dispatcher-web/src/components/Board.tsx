@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Column from './Column';
 import StuckModal from './StuckModal';
+import CreateTaskModal from './CreateTaskModal';
+import { useRBAC } from './RBAC';
 import type { CardType } from '../types';
 
 const COLUMNS = [
@@ -15,6 +17,8 @@ const COLUMNS = [
 const Board: React.FC = () => {
   const [cards, setCards] = useState<CardType[]>([]);
   const [selectedStuckCard, setSelectedStuckCard] = useState<CardType | null>(null);
+  const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
+  const { canManageAgents } = useRBAC();
 
   const fetchCards = async () => {
     try {
@@ -54,6 +58,19 @@ const Board: React.FC = () => {
     setSelectedStuckCard(null);
   };
 
+  const handleCreateTask = async (title: string, description: string) => {
+    try {
+      await fetch('http://localhost:8000/api/cards', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ title, description })
+      });
+      await fetchCards();
+    } catch (error) {
+      console.error("Failed to create task", error);
+    }
+  };
+
   const handleDropCard = async (cardId: string, targetColumnId: string) => {
     // Optimistic UI update
     setCards(prevCards => 
@@ -75,8 +92,21 @@ const Board: React.FC = () => {
   };
 
   return (
-    <div className="board-container">
-      {COLUMNS.map(col => (
+    <div className="flex flex-col gap-4 h-full">
+      <div className="flex justify-between items-center bg-zinc-900 p-4 rounded-xl border border-zinc-800 shadow-md">
+        <h2 className="text-lg font-medium text-zinc-200">Active Sprint Board</h2>
+        {canManageAgents && (
+          <button 
+            onClick={() => setIsCreateModalOpen(true)}
+            className="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg font-medium shadow-lg transition-colors flex items-center gap-2"
+          >
+            <span className="text-xl leading-none">+</span> Add Task
+          </button>
+        )}
+      </div>
+
+      <div className="board-container flex-1 min-h-0">
+        {COLUMNS.map(col => (
         <Column 
           key={col.id} 
           id={col.id} 
@@ -92,6 +122,13 @@ const Board: React.FC = () => {
           card={selectedStuckCard} 
           onClose={() => setSelectedStuckCard(null)}
           onSubmit={handleStuckSubmit}
+        />
+      )}
+
+      {isCreateModalOpen && (
+        <CreateTaskModal 
+          onClose={() => setIsCreateModalOpen(false)} 
+          onSubmit={handleCreateTask} 
         />
       )}
     </div>
